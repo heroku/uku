@@ -2,52 +2,53 @@ const Confidence = require('confidence');
 const criteria = { env: process.env.NODE_ENV };
 
 const config = {
-  $meta: 'This file configures the API.',
-  server: {
-    port: {
-      $filter: 'env',
-      production: process.env.PORT || 3000,
-      $default: process.env.PORT || 3000
+  '$meta': 'This file configures the API.',
+  'server': {
+    'port': {
+      '$filter': 'env',
+      'production': +process.env.PORT,
+      '$default': 3000
     },
-    shouldRequireLout: {
-      $filter: 'env',
-      production: false,
-      $default: true
+    'shouldRequireLout': {
+      '$filter': 'env',
+      'production': false,
+      '$default': true
     },
-    load: {
-      sampleInterval: {
-        $filter: 'env',
-        production: false,
-        $default: 1000
+    'load': {
+      'sampleInterval': {
+        '$filter': 'env',
+        'production': 0,
+        'test': 0,
+        '$default': 1000
       }
     }
   },
 
-  postgresql: {
-    $filter: 'env',
-    production: {
-      url: process.env.DATABASE_URL
+  'postgresql': {
+    '$filter': 'env',
+    'production': {
+      'url': process.env.DATABASE_URL
     },
-    test: {
-      url: 'postgres://user:password@localhost:5432/test-db-id'
+    'test': {
+      'url': 'postgres://user:password@localhost:5432/test-db-id'
     },
-    $default: {
-      url: 'postgres://user:password@localhost:5432/dev-db-id'
+    '$default': {
+      'url': 'postgres://user:password@localhost:5432/dev-db-id'
     }
   },
 
   // https://github.com/ddollar/redis-url
   // redis://[:password@]host:port[/db-number][?option=value]
-  redis: {
-    $filter: 'env',
-    production: {
-      url: process.env.REDIS_URL
+  'redis': {
+    '$filter': 'env',
+    'production': {
+      'url': process.env.REDIS_URL
     },
-    test: {
-      url: 'redis://h:password@localhost:6379/2'
+    'test': {
+      'url': 'redis://h:password@localhost:6379/2'
     },
-    $default: {
-      url: 'redis://h:password@localhost:6379/2'
+    '$default': {
+      'url': 'redis://h:password@localhost:6379/2'
     }
   }
 };
@@ -56,12 +57,15 @@ const config = {
 
 const store = new Confidence.Store(config);
 
+exports.store = store;
+
 exports.get = function (key) {
 
   return store.get(key, criteria);
 };
 
-exports.meta = function (key) {
 
-  return store.meta(key, criteria);
-};
+// exports.meta = function (key) {
+
+//   return store.meta(key, criteria);
+// };

@@ -8,7 +8,7 @@ exports.register = function (server, options, next) {
     server.route(r);
   });
 
-  return next();
+  next();
 };
 
 exports.register.attributes = {

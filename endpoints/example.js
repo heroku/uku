@@ -17,7 +17,7 @@ Joi.object().keys(
   {
     bank: Joi.object().keys({                  // optional
       balance: Joi.number().min(0).required(), // required
-      asOf: Joi.date().required()              // required
+      asOf: Joi.date().iso().required()              // required
     })
   }
 );
@@ -40,7 +40,7 @@ module.exports = [
       reply({
         bank: {
           balance: 54.32,
-          asOf: Date.now()
+          asOf: new Date().toISOString()
         }
       });
     }
