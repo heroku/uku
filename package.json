@@ -4,7 +4,7 @@
   "description": "node.js template for Heroku API services",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/lab --timeout 5000 --lint --coverage",
     "start": "node --harmony_arrow_functions index.js"
   },
   "repository": {
@@ -32,5 +32,9 @@
     "hapi": "^8.4.0",
     "hoek": "^2.13.0",
     "joi": "^6.4.1"
+  },
+  "devDependencies": {
+    "code": "^1.4.0",
+    "lab": "^5.8.1"
   }
 }

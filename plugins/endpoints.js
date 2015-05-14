@@ -1,4 +1,4 @@
-var info   = require('../package.json');
+var info = require('../package.json');
 var endpoints = require('../endpoints');
 
 exports.register = function (server, options, next) {
