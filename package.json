@@ -23,6 +23,10 @@
     "url": "https://github.com/heroku/lanai/issues"
   },
   "homepage": "https://github.com/heroku/lanai",
+  "engines": {
+    "iojs": "2.0.x",
+    "npm": "2.9.0"
+  },
   "dependencies": {
     "confidence": "^1.1.0",
     "hapi": "^8.4.0"
