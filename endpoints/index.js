@@ -3,13 +3,15 @@ const Path = require('path');
 const Hoek = require('hoek');
 
 const endpoints = [];
-const exclude = ['helpers.js'];
 
 fs
   .readdirSync(__dirname)
   .filter(function (file) {
 
-    return (file.indexOf('.') !== 0) && (file !== 'index.js') && (exclude.indexOf(file) < 0);
+    const fileIsNotHidden = (file.indexOf('.') !== 0);
+    const fileIsNotIndexJs = (file !== 'index.js');
+
+    return fileIsNotHidden & fileIsNotIndexJs;
   })
   .forEach(function (file) {
 
