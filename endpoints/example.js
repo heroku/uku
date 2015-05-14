@@ -17,7 +17,7 @@ Joi.object().keys(
   {
     bank: Joi.object().keys({                  // optional
       balance: Joi.number().min(0).required(), // required
-      as_of: Joi.date().required(),            // required
+      asOf: Joi.date().required()              // required
     })
   }
 );
@@ -29,10 +29,10 @@ module.exports = [
   // usage: curl -d 'user[email]=johnny@heroku.com' http://localhost:3000/example
   {
     method: 'POST',
-    path:   '/example',
+    path: '/example',
     config: {
       validate: { payload: EXPECTED_INCOMING_SCHEMA },
-      response: { schema:  EXPECTED_OUTGOING_SCHEMA }
+      response: { schema: EXPECTED_OUTGOING_SCHEMA }
     },
     handler: function (request, reply) {
       /* var db = request.server.app.db; */
@@ -40,7 +40,7 @@ module.exports = [
       reply({
         bank: {
           balance: 54.32,
-          as_of:   Date.now()
+          asOf: Date.now()
         }
       });
     }
