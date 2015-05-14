@@ -29,6 +29,8 @@
   },
   "dependencies": {
     "confidence": "^1.1.0",
-    "hapi": "^8.4.0"
+    "hapi": "^8.4.0",
+    "hoek": "^2.13.0",
+    "joi": "^6.4.1"
   }
 }
