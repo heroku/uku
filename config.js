@@ -7,7 +7,7 @@ const config = {
   'server': {
     'port': {
       '$filter': 'env',
-      'production': +process.env.PORT,
+      'production': process.env.PORT,
       '$default': 3000
     },
     'shouldRequireLout': {
