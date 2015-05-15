@@ -3,6 +3,7 @@ const criteria = { env: process.env.NODE_ENV };
 
 const config = {
   '$meta': 'This file configures the API.',
+
   'server': {
     'port': {
       '$filter': 'env',
@@ -26,14 +27,40 @@ const config = {
 
   'postgresql': {
     '$filter': 'env',
+
     'production': {
-      'url': process.env.DATABASE_URL
+      'client': 'postgresql',
+      'connection': process.env.DATABASE_URL,
+      'pool': {
+        'min': 2,
+        'max': 10
+      },
+      'migrations': {
+        'tableName': 'knex_migrations'
+      }
     },
     'test': {
-      'url': 'postgres://user:password@localhost:5432/test-db-id'
+      'client': 'postgresql',
+      'connection': 'postgres://user:password@localhost:5432/test-db-id?ssl=true',
+      'pool': {
+        'min': 2,
+        'max': 10
+      },
+      'migrations': {
+        'tableName': 'knex_migrations'
+      }
     },
     '$default': {
-      'url': 'postgres://user:password@localhost:5432/dev-db-id'
+      'client': 'postgresql',
+      'connection': 'postgres://user:password@localhost:5432/dev-db-id?ssl=true',
+      'pool': {
+        'min': 2,
+        'max': 10
+      },
+      'migrations': {
+        'tableName': 'knex_migrations'
+      },
+      'debug': true
     }
   },
 
