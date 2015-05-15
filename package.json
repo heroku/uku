@@ -28,10 +28,13 @@
     "npm": "2.9.0"
   },
   "dependencies": {
+    "bookshelf": "^0.8.1",
     "confidence": "^1.1.0",
     "hapi": "^8.4.0",
     "hoek": "^2.13.0",
-    "joi": "^6.4.1"
+    "joi": "^6.4.1",
+    "knex": "^0.8.5",
+    "pg": "^4.3.0"
   },
   "devDependencies": {
     "code": "^1.4.0",
