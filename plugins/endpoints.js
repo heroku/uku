@@ -1,5 +1,5 @@
-var info = require('../package.json');
-var endpoints = require('../endpoints');
+const info = require('../package.json');
+const endpoints = require('../endpoints');
 
 exports.register = function (server, options, next) {
 

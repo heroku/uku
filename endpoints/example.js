@@ -35,7 +35,7 @@ module.exports = [
       response: { schema: EXPECTED_OUTGOING_SCHEMA }
     },
     handler: function (request, reply) {
-      /* var db = request.server.app.db; */
+      /* const db = request.server.app.db; */
 
       reply({
         bank: {
