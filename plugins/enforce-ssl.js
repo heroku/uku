@@ -9,7 +9,7 @@ exports.register = function (server, options, next) {
 
       if (request.headers['x-forwarded-proto'] !== 'https') {
         return reply('Forwarding to a more secure route')
-              .redirect('https://' + request.headers.host + request.path);
+              .redirect(`https://${request.headers.host}${request.url.path}`);
       }
 
       reply();
