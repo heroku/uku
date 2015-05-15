@@ -22,6 +22,11 @@ const config = {
         'test': 0,
         '$default': 1000
       }
+    },
+    'enforceSSL': {
+      '$filter': 'env',
+      'production': true,
+      '$default': false
     }
   },
 
