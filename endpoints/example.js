@@ -6,7 +6,7 @@ module.exports = [
 
   // usage: curl -d 'user[email]=johnny@heroku.com' http://localhost:3000/example
   {
-    method: 'POST',
+    method: '*',
     path: '/example',
 
     config: {
@@ -30,13 +30,30 @@ module.exports = [
     },
 
     handler: function (request, reply) {
-      /* const db = request.server.app.db; */
 
       reply({
         bank: {
           balance: 54.32,
           asOf: new Date().toISOString()
         }
+      });
+    }
+  },
+
+  // curl -H 'Authorization: Bearer insert-oauth-token-here' http://localhost:3000/apps
+  {
+    method: 'get',
+    path: '/apps',
+    config: {
+      plugins: {
+        policies: ['isAuthenticated']
+      }
+    },
+    handler: function(request, reply) {
+
+      var api = request.app.api;
+      api.get('/apps', function(error, response, apps) {
+        reply(apps);
       });
     }
   }

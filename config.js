@@ -82,6 +82,15 @@ const config = {
     '$default': {
       'url': 'redis://h:password@localhost:6379/2'
     }
+  },
+
+  'http': {
+    'timeout': 10000
+  },
+
+  'heroku': {
+    'user_agent': require('./package.json').name,
+    'api': 'api.heroku.com'
   }
 };
 
