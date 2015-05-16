@@ -1,6 +1,6 @@
-var Boom = require('boom');
+const Boom = require('boom');
 
-var needsAPI = function(request, reply, next) {
+const needsAPI = function(request, reply, next) {
   const authorization = request.headers.authorization;
   const bearer = authorization && authorization.split(' ')[1];
 

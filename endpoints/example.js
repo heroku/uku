@@ -51,7 +51,7 @@ module.exports = [
     },
     handler: function(request, reply) {
 
-      var api = request.app.api;
+      const api = request.app.api;
       api.get('/apps', function(error, response, apps) {
         reply(apps);
       });
