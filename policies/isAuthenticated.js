@@ -10,6 +10,7 @@ const needsAPI = function(request, reply, next) {
   }
 
   // attach new API client to current request
+  request.app.bearer = bearer;
   request.app.api = require('../lib/api-client')(bearer);
 
   next(null, true);
