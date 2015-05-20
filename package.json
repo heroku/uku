@@ -1,5 +1,5 @@
 {
-  "name": "lanai",
+  "name": "uku",
   "version": "0.0.1",
   "description": "node.js template for Heroku API services",
   "main": "index.js",
