@@ -28,6 +28,7 @@
     "npm": "2.9.0"
   },
   "dependencies": {
+    "benny-hanes-socket-pool": "^1.0.2",
     "bookshelf": "^0.8.1",
     "boom": "^2.7.1",
     "confidence": "^1.1.0",
