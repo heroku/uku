@@ -1,5 +1,6 @@
 const pkg = require('./package.json');
 const server = require('./lib/server');
+require('benny-hanes-socket-pool');
 
 server.start(printStatus);
 
