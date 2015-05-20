@@ -5,7 +5,8 @@
 
   "ecmaFeatures": {
     "arrowFunctions": true,
-    "templateStrings": true
+    "templateStrings": true,
+    "blockBindings": true
   },
 
   "globals": {
