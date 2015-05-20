@@ -1,8 +1,8 @@
+const pkg = require('./package.json');
 const server = require('./lib/server');
-const serverName = 'lanai';
 
 server.start(printStatus);
 
 function printStatus() {
-  console.log(`${serverName} running at: ${server.info.uri}`);
+  console.log(`${pkg.name} running at: ${server.info.uri}`);
 }
