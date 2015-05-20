@@ -52,7 +52,11 @@ module.exports = [
     handler: function(request, reply) {
 
       const api = request.app.api;
-      api.get('/apps', function(error, response, apps) {
+
+      api
+      .getAsync('/apps')
+      .spread(function(response, apps) {
+
         reply(apps);
       });
     }

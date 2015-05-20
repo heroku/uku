@@ -28,6 +28,7 @@
     "npm": "2.9.0"
   },
   "dependencies": {
+    "bluebird": "^2.9.25",
     "bookshelf": "^0.8.1",
     "boom": "^2.7.1",
     "confidence": "^1.1.0",
