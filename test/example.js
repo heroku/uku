@@ -36,7 +36,7 @@ lab.experiment('endpoints', function () {
   lab.test('resolves example request', function (done) {
     server.inject({
       method: 'POST',
-      url: '/example',
+      url: '/api/example',
       headers: {
         'Content-Type': 'application/json'
       },
