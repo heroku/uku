@@ -1,4 +1,3 @@
-const Hoek = require('hoek');
 const info = require('../package.json');
 const conf = require('../config');
 
