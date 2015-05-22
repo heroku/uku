@@ -18,7 +18,7 @@
     "microservices"
   ],
   "author": "johnny domino <jvdomino@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/heroku/lanai/issues"
   },
