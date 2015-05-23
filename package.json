@@ -35,6 +35,7 @@
     "hapi": "^8.4.0",
     "joi": "^6.4.1",
     "knex": "^0.8.5",
+    "lodash": "^3.9.1",
     "mrhorse": "0.0.3",
     "pg": "^4.3.0",
     "request": "request/request#master"
