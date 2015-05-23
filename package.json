@@ -4,7 +4,7 @@
   "description": "node.js template for Heroku API services",
   "main": "index.js",
   "scripts": {
-    "test": "node --use_strict ./node_modules/.bin/lab --timeout 5000 --lint",
+    "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --timeout 5000 --lint",
     "start": "node --use_strict --harmony_arrow_functions index.js"
   },
   "repository": {
