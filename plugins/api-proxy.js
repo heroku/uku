@@ -1,5 +1,6 @@
 const info = require('../package.json');
 const conf = require('../config');
+const _ = require('lodash');
 
 exports.register = function (server, options, next) {
 
@@ -23,11 +24,11 @@ exports.register = function (server, options, next) {
           const path = request.url.path.slice(4); // strip `/api` prefix
 
           // set custom headers
-          const headers = Hoek.applyToDefaults(request.headers, {
+          const headers = _.defaults({}, {
             'host': host,
             'x-heroku-legacy-ids': true,
             'user-agent': conf.get('/heroku/user-agent')
-          });
+          }, request.headers);
 
           callback(null, `https://${host}${path}`, headers);
         }
