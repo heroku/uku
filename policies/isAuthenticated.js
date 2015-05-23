@@ -11,7 +11,7 @@ const needsAPI = function(request, reply, next) {
   }
 
   // attach new API client to current request
-  const api = require('../lib/api-client')(bearer)
+  const api = require('../lib/api-client')();
 
   // return console.dir(api.get('/foo').headers);
 
