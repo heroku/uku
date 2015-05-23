@@ -5,7 +5,7 @@ exports.register = function (server, options, next) {
 
   server.route({
     method: '*',                            // all methods
-    path: '/api/{path}',                    // all routes prefixed with `/api/`
+    path: '/proxy/{path}',                  // all routes prefixed with `/api/`
     handler: {
       proxy: {
         passThrough: true,                  // forwards the headers sent from the client to the upstream service
