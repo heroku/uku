@@ -1,6 +1,4 @@
-# uku
-
-![hero](http://cl.ly/image/0n3o0v2U233X/green-turtle-maui-hawaii-256054.jpg)
+![hero](http://cl.ly/image/0k2g0R0S1P3f/uku-vectorized.jpg)
 
 uku is [hapijs](http://hapijs.com/) boilerplate for slinging together an API, microservice, or what-have-you.
 
