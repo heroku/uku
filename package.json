@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/lanai.git"
+    "url": "https://github.com/heroku/uku.git"
   },
   "keywords": [
     "node.js",
@@ -20,26 +20,26 @@
   "author": "johnny domino <jvdomino@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heroku/lanai/issues"
+    "url": "https://github.com/heroku/uku/issues"
   },
-  "homepage": "https://github.com/heroku/lanai",
+  "homepage": "https://github.com/heroku/uku",
   "engines": {
-    "iojs": "2.0.x",
+    "iojs": "2.2.x",
     "npm": "2.9.0"
   },
   "dependencies": {
-    "bluebird": "^2.9.25",
+    "bluebird": "^2.9.27",
     "bookshelf": "^0.8.1",
-    "boom": "^2.7.1",
+    "boom": "^2.7.2",
     "confidence": "^1.1.0",
-    "hapi": "^8.4.0",
+    "hapi": "^8.6.0",
     "hapi-require-https": "^2.0.0",
-    "joi": "^6.4.1",
-    "knex": "^0.8.5",
-    "lodash": "^3.9.1",
-    "mrhorse": "0.0.3",
+    "joi": "^6.4.3",
+    "knex": "^0.8.6",
+    "lodash": "^3.9.3",
+    "mrhorse": "1.1.0",
     "pg": "^4.3.0",
-    "request": "request/request#master"
+    "request": "^2.57.0"
   },
   "devDependencies": {
     "code": "^1.4.0",
