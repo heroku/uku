@@ -13,14 +13,10 @@ const needsAPI = function(request, reply, next) {
   // attach new API client to current request
   const api = require('../lib/api-client');
 
-  // return console.dir(api.get('/foo').headers);
-
   request.app.bearer = bearer;
-  request.app.api = Bluebird.promisifyAll(api.defaults({auth: { bearer: bearer }}));
-
-  if (process.env.NODE_ENV === 'test') {
-    request.app.api = api;
-  }
+  request.app.api = Bluebird.promisifyAll(api.defaults({
+    auth: { bearer: bearer }
+  }));
 
   next(null, true);
 };
