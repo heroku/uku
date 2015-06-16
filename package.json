@@ -1,11 +1,10 @@
 {
   "name": "uku",
   "version": "0.0.1",
-  "description": "node.js template for Heroku API services",
+  "description": "node.js boilerplate for the hapi ecosystem",
   "main": "index.js",
   "scripts": {
-    "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --timeout 5000 --lint",
-    "start": "node --use_strict --harmony_arrow_functions index.js"
+    "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --timeout 5000 --lint"
   },
   "repository": {
     "type": "git",
@@ -14,6 +13,7 @@
   "keywords": [
     "node.js",
     "api",
+    "boilerplate",
     "template",
     "microservices"
   ],
@@ -23,21 +23,16 @@
     "url": "https://github.com/heroku/uku/issues"
   },
   "homepage": "https://github.com/heroku/uku",
-  "engines": {
-    "iojs": "2.2.x",
-    "npm": "2.9.0"
-  },
   "dependencies": {
     "bluebird": "^2.9.27",
     "bookshelf": "^0.8.1",
     "boom": "^2.7.2",
     "confidence": "^1.1.0",
-    "hapi": "^8.6.0",
+    "hapi": "^8.6.1",
     "hapi-require-https": "^2.0.0",
     "joi": "^6.4.3",
     "knex": "^0.8.6",
     "lodash": "^3.9.3",
-    "mrhorse": "1.1.0",
     "pg": "^4.3.0",
     "request": "^2.57.0"
   },
