@@ -25,7 +25,7 @@ exports.printStatus = function printStatus() {
   console.log(`${pkg.name} running at: ${server.info.uri}`);
 };
 
-exports.registerPlugins = function(require, additionalPlugins, done) {
+exports.run = function(require, additionalPlugins, done) {
   const pluginsPath = Path.join(__dirname, 'lib/plugins');
   const plugins = pluginModules(require).concat(require(pluginsPath)).concat(additionalPlugins);
 
