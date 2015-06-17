@@ -3,23 +3,22 @@ const pkgPath = Path.join(process.cwd(), 'package.json');
 const pkg = require(pkgPath);
 const isRunFromCLI = (require.main === module);
 
-const pluginNames = Object.keys(pkg.dependencies)
-                          .filter((moduleName) => {
-                            return moduleName.match(/^uku-/);
-                          });
-
 const server = exports.server = require('./lib/server');
 
 const pluginModules = (require) => {
-  return pluginNames.map((moduleName) => {
-    // $lab:coverage:off$
-    if (isRunFromCLI) {
-      console.log('registering uku plugin: ', moduleName);
-    }
-    // $lab:coverage:on$
+  return Object.keys(pkg.dependencies)
+               .filter((moduleName) => {
+                 return moduleName.match(/^uku-/);
+               })
+               .map((moduleName) => {
+               // $lab:coverage:off$
+               if (isRunFromCLI) {
+                 console.log('registering uku plugin: ', moduleName);
+               }
+               // $lab:coverage:on$
 
-    return require(moduleName);
-  });
+               return require(moduleName);
+             });
 };
 
 exports.printStatus = function printStatus() {
