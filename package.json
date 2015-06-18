@@ -31,13 +31,14 @@
     "confidence": "^1.1.0",
     "hapi": "^8.6.1",
     "hapi-require-https": "^2.0.0",
-    "joi": "^6.4.3"
-  },
-  "devDependencies": {
-    "code": "^1.4.0",
-    "lab": "^5.9.0",
+    "joi": "^6.4.3",
+
     "chalk": "^1.0.0",
     "ncp": "^2.0.0",
     "yargs": "^3.11.0"
+  },
+  "devDependencies": {
+    "code": "^1.4.0",
+    "lab": "^5.9.0"
   }
 }
