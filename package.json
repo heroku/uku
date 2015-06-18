@@ -6,6 +6,9 @@
   "scripts": {
     "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --timeout 5000 --lint"
   },
+  "bin": {
+    "uku": "./lib/generators/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/heroku/uku.git"
@@ -32,6 +35,9 @@
   },
   "devDependencies": {
     "code": "^1.4.0",
-    "lab": "^5.9.0"
+    "lab": "^5.9.0",
+    "chalk": "^1.0.0",
+    "ncp": "^2.0.0",
+    "yargs": "^3.11.0"
   }
 }
