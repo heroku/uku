@@ -14,5 +14,9 @@
     "hapi-require-https": "^2.0.0",
     "hoek": "^2.14.0",
     "uku": "heroku/uku"
+  },
+  "devDependencies": {
+    "code": "^1.4.0",
+    "lab": "^5.9.0"
   }
 }
