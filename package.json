@@ -1,10 +1,10 @@
 {
   "name": "uku",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "node.js boilerplate for the hapi ecosystem",
   "main": "index.js",
   "scripts": {
-    "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --timeout 5000 --lint"
+    "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --lint"
   },
   "bin": {
     "uku": "./lib/generators/index.js"
@@ -27,12 +27,6 @@
   },
   "homepage": "https://github.com/heroku/uku",
   "dependencies": {
-    "boom": "^2.7.2",
-    "confidence": "^1.1.0",
-    "hapi": "^8.6.1",
-    "hapi-require-https": "^2.0.0",
-    "joi": "^6.4.3",
-
     "chalk": "^1.0.0",
     "ncp": "^2.0.0",
     "yargs": "^3.11.0"

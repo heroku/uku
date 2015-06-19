@@ -3,10 +3,22 @@ const Lab = require('lab');
 
 const expect = Code.expect;
 const lab = exports.lab = Lab.script();
-const server = require('../lib/server');
+
+let server;
 
 
 lab.experiment('server', function () {
+
+  lab.before(function(done) {
+
+    require('glue').compose({}, {}, function(err, _server) {
+
+      if (err) { throw err; }
+
+      server = _server;
+      done();
+    });
+  });
 
   lab.after(function (done) {
 
