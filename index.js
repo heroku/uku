@@ -11,7 +11,7 @@ exports.run = function(manifest, options, ready) {
 
     else {
 
-      return server.start(ready.bind({ server:server }));
+      return server.start(ready.bind({ server: server }));
     }
   });
 
