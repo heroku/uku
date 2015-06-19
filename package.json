@@ -4,7 +4,7 @@
   "description": "node.js boilerplate for the hapi ecosystem",
   "main": "index.js",
   "scripts": {
-    "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --lint"
+    "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --lint -c"
   },
   "bin": {
     "uku": "./lib/generators/index.js"
