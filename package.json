@@ -28,6 +28,7 @@
   "homepage": "https://github.com/heroku/uku",
   "dependencies": {
     "chalk": "^1.0.0",
+    "glue": "^2.1.0",
     "ncp": "^2.0.0",
     "yargs": "^3.11.0"
   },
