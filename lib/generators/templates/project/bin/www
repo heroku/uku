@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+const pkg = require('../package.json');
+
+require('../index')
+  .run()
+  .then((server) => {
+    console.log(`${pkg.name} running at: ${server.info.uri}`);
+  })
+  .catch((err) => {
+    throw err;
+  });

@@ -1,18 +1,22 @@
 const Glue = require('glue');
 
-exports.run = function(manifest, options, ready) {
+exports.run = function(manifest, options) {
 
-  Glue.compose(manifest, options, function(err, server) {
+  return new Promise(function(resolve, reject) {
 
-    if (err) {
+    return Glue.compose(manifest, options, function(err, server) {
 
-      return ready(err);
-    }
+      if (err) {
 
-    else {
+        return reject(err);
+      }
 
-      return server.start(ready.bind({ server: server }));
-    }
+      else {
+
+        return server.start(function() {
+          return resolve(server);
+        });
+      }
+    });
   });
-
 };

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --use_strict --harmony_arrow_functions index.js",
-    "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --timeout 5000 --lint -c"
+    "start": "node --use_strict --harmony_arrow_functions ./bin/www",
+    "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --lint -c"
   },
   "author": "",
   "license": "MIT",
