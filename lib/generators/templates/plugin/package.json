@@ -1,0 +1,22 @@
+{
+  "name": "plugin-name",
+  "version": "1.0.0",
+  "description": "uku plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --timeout 5000 --lint -c"
+  },
+  "keywords": [
+    "uku"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "hapi": "^8.6.1",
+    "code": "^1.4.0",
+    "lab": "^5.9.0"
+  }
+}

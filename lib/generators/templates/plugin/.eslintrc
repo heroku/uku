@@ -1,0 +1,23 @@
+{
+  "env": {
+    "node": true
+  },
+
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "templateStrings": true,
+    "blockBindings": true
+  },
+
+  "globals": {
+
+  },
+
+  "rules": {
+    "quotes": [2, "single", "avoid-escape"],
+    "strict": 0,
+    "no-comma-dangle": 0,
+    "no-underscore-dangle": 0,
+    "no-use-before-define" : 0
+  }
+}
