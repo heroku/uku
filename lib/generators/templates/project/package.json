@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --use_strict --harmony_arrow_functions ./bin/www",
+    "start": "node ./node_modules/.bin/forever -c 'node --use_strict --harmony_arrow_functions' --spinSleepTime 1 --minUptime 1000 ./bin/www",
     "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --lint -c"
   },
   "author": "",
@@ -13,7 +13,8 @@
     "confidence": "1.x.x",
     "hapi-require-https": "2.x.x",
     "hoek": "2.x.x",
-    "uku": "heroku/uku"
+    "uku": "heroku/uku",
+    "forever": "^0.14.1"
   },
   "devDependencies": {
     "code": "1.x.x",

@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --use_strict --harmony_arrow_functions
+
 const pkg = require('../package.json');
 
 require('../index')
