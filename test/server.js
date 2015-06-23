@@ -4,9 +4,6 @@ const Lab = require('lab');
 const expect = Code.expect;
 const lab = exports.lab = Lab.script();
 
-
-
-
 const Uku = require('../index');
 const manifest = {
   server: {},
@@ -45,7 +42,7 @@ lab.experiment('server', function () {
 
       expect(err1).to.equal(err2);
       done();
-    })
+    });
   });
 
 });
