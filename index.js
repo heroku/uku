@@ -1,3 +1,4 @@
+require('./lib/newrelic');
 const Glue = require('glue');
 
 exports.run = function (manifest, options) {
