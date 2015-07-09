@@ -1,7 +1,11 @@
 require('./lib/newrelic');
 const Glue = require('glue');
+const Hoek = require('hoek');
 
 exports.run = function (manifest, options) {
+
+  // register plugins based on NODE_ENV
+  manifest.plugins = exports.activePlugins(process.env.NODE_ENV, manifest.plugins);
 
   return new Promise(function (resolve, reject) {
 
@@ -25,5 +29,14 @@ exports.ready = function (err, server, resolve, reject) {
 
       return resolve(server);
     });
+  }
+};
+
+exports.activePlugins = function (env, plugins) {
+  switch(env) {
+    case 'production':
+      return Hoek.applyToDefaults(Hoek.clone(plugins.always), plugins.production);
+    default:
+      return plugins.always;
   }
 };
