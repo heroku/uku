@@ -10,7 +10,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: [pkg.name],
+  app_name: [pkg.name], // eslint-disable-line camelcase
   logging: {
 
     /**
@@ -36,7 +36,7 @@ exports.config = {
    *
    * @env NEW_RELIC_ERROR_COLLECTOR_ENABLED
    */
-  error_collector: {
+  error_collector: { // eslint-disable-line camelcase
 
     /**
      * List of HTTP error status codes the error tracer should disregard.
@@ -48,6 +48,6 @@ exports.config = {
      *
      * @env NEW_RELIC_ERROR_COLLECTOR_IGNORE_ERROR_CODES
      */
-    ignore_status_codes: [400, 403, 422, 404]
+    ignore_status_codes: [400, 403, 422, 404] // eslint-disable-line camelcase
   }
-}
+};
