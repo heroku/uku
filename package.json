@@ -28,7 +28,6 @@
   "homepage": "https://github.com/heroku/uku",
   "dependencies": {
     "chalk": "^1.0.0",
-    "forever": "^0.14.1",
     "glue": "^2.1.0",
     "hoek": "^2.14.0",
     "ncp": "^2.0.0",
