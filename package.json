@@ -1,6 +1,6 @@
 {
   "name": "uku",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "node.js boilerplate for the hapi ecosystem",
   "main": "index.js",
   "scripts": {
