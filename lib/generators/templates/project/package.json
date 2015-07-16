@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "iojs": "2.3.x",
+    "npm": "2.11.x"
+  },
   "scripts": {
     "start": "node ./node_modules/.bin/forever -c 'node --use_strict --harmony_arrow_functions' --spinSleepTime 1 --minUptime 1000 ./bin/www",
     "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --lint -c"
   },
   "author": "",
+  "contributors":[
+
+  ],
   "license": "MIT",
   "dependencies": {
     "confidence": "1.x.x",
