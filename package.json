@@ -27,15 +27,15 @@
   },
   "homepage": "https://github.com/heroku/uku",
   "dependencies": {
-    "chalk": "^1.0.0",
-    "glue": "^2.1.0",
+    "chalk": "^1.1.0",
+    "glue": "^2.1.1",
     "hoek": "^2.14.0",
     "ncp": "^2.0.0",
-    "newrelic": "^1.20.2",
-    "yargs": "^3.11.0"
+    "newrelic": "^1.21.1",
+    "yargs": "^3.15.0"
   },
   "devDependencies": {
-    "code": "^1.4.0",
-    "lab": "^5.9.0"
+    "code": "^1.4.1",
+    "lab": "^5.13.0"
   }
 }

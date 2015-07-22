@@ -21,8 +21,8 @@
     "hapi-require-https": "2.x.x",
     "hoek": "2.x.x",
     "uku": "heroku/uku",
-    "forever": "^0.14.1",
-    "icecreambar": "2.1.x"
+    "forever": "^0.14.2",
+    "icecreambar": "2.3.x"
   },
   "devDependencies": {
     "code": "1.x.x",
