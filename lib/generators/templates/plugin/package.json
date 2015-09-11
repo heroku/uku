@@ -9,14 +9,14 @@
   "keywords": [
     "uku"
   ],
-  "author": "",
+  "author": "johnny domino <jvdomino@gmail.com>",
   "license": "MIT",
   "dependencies": {
 
   },
   "devDependencies": {
-    "hapi": "^8.8.0",
-    "code": "^1.4.1",
-    "lab": "^5.13.0"
+    "hapi": "9.x.x",
+    "code": "1.x.x",
+    "lab": "5.x.x"
   }
 }
