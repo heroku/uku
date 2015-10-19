@@ -4,7 +4,7 @@
   "description": "uku plugin",
   "main": "index.js",
   "scripts": {
-    "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --timeout 5000 --lint -c"
+    "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --lint -c"
   },
   "keywords": [
     "uku"
@@ -15,8 +15,8 @@
 
   },
   "devDependencies": {
-    "hapi": "9.x.x",
-    "code": "1.x.x",
-    "lab": "5.x.x"
+    "hapi": "11.0.0",
+    "code": "^1.5.0",
+    "lab": "^5.16.1"
   }
 }
