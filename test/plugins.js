@@ -21,6 +21,7 @@ lab.experiment('server', () => {
     const always = StubPlugins.always;
 
     expect(active).to.equal(always);
+    expect(Object.keys(active).length).to.equal(1);
 
     done();
   });
@@ -30,6 +31,7 @@ lab.experiment('server', () => {
     const always = StubPlugins.always;
 
     expect(active).to.not.equal(always);
+    expect(Object.keys(active).length).to.equal(2);
 
     done();
   });
