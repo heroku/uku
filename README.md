@@ -4,7 +4,7 @@
 ## overview
 uku is a [hapijs](http://hapijs.com/) boilerplate generator for slinging together APIs/microservices/what-have-yous. It's not *another* simple lightweight framework that scales and makes empty promises -- it's just a great practice for working with http in node.js.
 
-As mentioned, it's based on [hapijs](http://hapijs.com/) -- an opensource framework that is maintained by [WalmartLabs](https://github.com/walmartlabs) and used internally to power their node.js efforst (including http://m.walmart.com).
+As mentioned, it's based on [hapijs](http://hapijs.com/) -- an opensource framework that is maintained by [WalmartLabs](https://github.com/walmartlabs) and used internally to power their node.js efforts (including http://m.walmart.com).
 
 ## background
 This project kicked off with the intent of simply being a boilerplate nodejs server that could be forked-and-customized for each project. These are the primary goals of the project:
